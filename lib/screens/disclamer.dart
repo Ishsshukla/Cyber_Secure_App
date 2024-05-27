@@ -1,4 +1,4 @@
-git addimport 'package:cyber_secure/main.dart';
+import 'package:cyber_secure/main.dart';
 import 'package:cyber_secure/screens/home.dart';
 import 'package:cyber_secure/screens/incident.dart';
 import 'package:cyber_secure/screens/loginscreen.dart';
@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'package:cyber_secure/screens/utilities.dart';
 import 'package:cyber_secure/screens/otpVerification.dart';
-import 'package:cyber_secure/screens/background_img.dart';
+// import 'package:cyber_secure/screens/background_img.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
