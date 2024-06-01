@@ -3,7 +3,7 @@ import 'package:cyber_secure/screens/language.dart';
 import 'package:cyber_secure/screens/navbar.dart';
 import 'package:flutter/material.dart';
 import 'package:cyber_secure/screens/utilities.dart';
-import 'package:cyber_secure/screens/background_img.dart';
+// import 'package:cyber_secure/screens/background_img.dart';
 import 'package:pinput/pinput.dart';
 // import 'package:email_auth/email_auth.dart';
 import 'package:cyber_secure/screens/loginscreen.dart';

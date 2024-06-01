@@ -1,4 +1,5 @@
 import 'package:cyber_secure/main.dart';
+import 'package:cyber_secure/screens/documentUpload.dart';
 import 'package:cyber_secure/screens/home.dart';
 import 'package:cyber_secure/screens/incident.dart';
 import 'package:cyber_secure/screens/loginscreen.dart';
@@ -7,20 +8,20 @@ import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'package:cyber_secure/screens/utilities.dart';
 import 'package:cyber_secure/screens/otpVerification.dart';
-// import 'package:cyber_secure/screens/background_img.dart';
+import 'package:cyber_secure/screens/background_img.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
 
-class desclamier extends StatefulWidget {
-  const desclamier({super.key});
+class guide extends StatefulWidget {
+  const guide({super.key});
   // late SharedPreferences prefs;
 
   @override
-  State<desclamier> createState() => _desclamierState();
+  State<guide> createState() => _guideState();
 }
 
-class _desclamierState extends State<desclamier> {
+class _guideState extends State<guide> {
   // final TextEditingController _emailController = TextEditingController();
   // final TextEditingController _nameController = TextEditingController();
   // bool _isLoading = false;
@@ -38,10 +39,10 @@ class _desclamierState extends State<desclamier> {
           ),
         ),
         Scaffold(
-            backgroundColor: Colors.transparent,
+            // backgroundColor: Colors.transparent,
             body: ListView(
-              children: [buildheading(context)],
-            )),
+          children: [buildheading(context)],
+        )),
         // if (_isLoading)
         //   Container(
         //     color: Colors.black.withOpacity(0.5),
@@ -67,8 +68,8 @@ class _desclamierState extends State<desclamier> {
           children: [
             IconButton(
               onPressed: () {
-                Navigator.push(
-                    context, MaterialPageRoute(builder: (context) => NavBar()));
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => document()));
               },
               icon: const Icon(Icons.arrow_back_ios),
               color: Color(0xff00194A),
@@ -76,11 +77,11 @@ class _desclamierState extends State<desclamier> {
             Padding(
               padding: EdgeInsets.only(left: 50),
               child: Text(
-                'Incident Details',
+                'Financial Fraud',
                 style: TextStyle(
                   fontSize: 23,
                   fontWeight: FontWeight.w500,
-                  color: Color(0xff00194A),
+                  color: Color(0xFF00184A),
                 ),
               ),
             ),
@@ -95,32 +96,74 @@ class _desclamierState extends State<desclamier> {
         //   fontfamily: '',
         // ),
         SizedBox(height: screenHeight * 0.02),
-        Padding(
-          padding: const EdgeInsets.all(10.0),
-          child: const CustomText1(
-            text:
-                "Prior to filing a complaint with this portal, we would request you to read the below information regarding terms and conditions.\n",
-            color: Color.fromARGB(255, 0, 0, 0),
-            fontSize: 20,
-            fontStyle: null,
-            fontfamily: 'Poppins',
-            //  fontWeight: FontWeight.w600,
+        Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          Padding(
+            padding: const EdgeInsets.all(15.0),
+            child: const CustomText1(
+              text: "Guidelines/Important Documents",
+              color: Color.fromARGB(255, 0, 0, 0),
+              fontSize: 20,
+              fontStyle: null,
+              fontfamily: 'Poppins',
+              //  fontWeight: FontWeight.w600,
+            ),
           ),
-        ),
-        Padding(
-          padding: const EdgeInsets.all(10.0),
-          child: const CustomText1(
-            text:
-                "The information I've provided on this form is correct to the best of my knowledge. I acknowledge that providing false information could make me liable to penal actions under Indian Laws.\n I understand that action on the complaints reported on this portal shall be taken by concerned authorities as per Indian Laws.\n The complaint information you submit to this site is encrypted via secure socket layer (SSL) encryption. Please see the",
-            color: Color.fromARGB(255, 12, 13, 15),
-            fontSize: 18,
-            fontStyle: null,
-            fontfamily: 'Poppins',
+          Padding(
+            padding: const EdgeInsets.all(15.0),
+            child: const CustomText1(
+              text: "• Details and screenshots of websites visited. ",
+              color: Color(0xFF333333),
+              fontSize: 16,
+              fontStyle: null,
+              fontfamily: 'Poppins',
+            ),
           ),
-        ),
+          Padding(
+            padding: const EdgeInsets.all(15.0),
+            child: const CustomText1(
+              text:
+                  "• Passbook copy/statement of applicant's bank account. • Copy of the message from the company. ",
+              color: Color(0xFF333333),
+              fontSize: 16,
+              fontStyle: null,
+              fontfamily: 'Poppins',
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(15.0),
+            child: const CustomText1(
+              text: "• Copy of debit/credit card.  ",
+              color: Color(0xFF333333),
+              fontSize: 16,
+              fontStyle: null,
+              fontfamily: 'Poppins',
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(15.0),
+            child: const CustomText1(
+              text:
+                  "• OTP If the money has been deducted without it, the money is refundable as per the guidelines of RBI. So that the applicant informs the branch/RBI ",
+              color: Color(0xFF333333),
+              fontSize: 16,
+              fontStyle: null,
+              fontfamily: 'Poppins',
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(15.0),
+            child: const CustomText1(
+              text: "•  Passbook copy/statement of applicant's bank account.  ",
+              color: Color(0xFF333333),
+              fontSize: 16,
+              fontStyle: null,
+              fontfamily: 'Poppins',
+            ),
+          ),
+        ])
 
-        SizedBox(height: screenHeight * 0.04),
-        button3("I Accept", 40.0, 320.0, context, page()),
+        // SizedBox(height: screenHeight * 0.04),
+        // button3("I Accept", 40.0, 320.0, context, page()),
       ],
     );
   }

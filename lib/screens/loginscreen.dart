@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'package:cyber_secure/screens/utilities.dart';
 import 'package:cyber_secure/screens/otpVerification.dart';
-import 'package:cyber_secure/screens/background_img.dart';
+// import 'package:cyber_secure/screens/background_img.dart';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
 
