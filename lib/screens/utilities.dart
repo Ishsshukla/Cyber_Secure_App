@@ -972,3 +972,148 @@ class DottedBorderPainter extends CustomPainter {
     return false;
   }
 }
+
+Widget graph(String image, String text2, BuildContext context) {
+  final screenHeight = MediaQuery.of(context).size.height;
+  final screenWidth = MediaQuery.of(context).size.width;
+
+  return GestureDetector(
+      onTap: () {},
+      child: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.all(Radius.circular(6)),
+        ),
+        height: screenHeight * 0.34,
+        width: screenWidth * 0.9,
+        child: Column(children: [
+          SizedBox(height: screenHeight * 0.01),
+          Text(
+            text2,
+            style: TextStyle(
+              color: Color.fromARGB(255, 3, 6, 12),
+              fontSize: 18,
+              fontFamily: 'Poppins',
+              fontWeight: FontWeight.w500,
+            ),
+          ),
+          SizedBox(height: screenHeight * 0.01),
+          Container(
+            height: screenHeight * 0.26,
+            width: screenWidth * 0.9,
+            child: Image.asset(
+              image,
+              height: screenHeight * 0.09,
+              fit: BoxFit.cover,
+              scale: 5,
+            ),
+          )
+        ]),
+      ));
+}
+
+Widget notification(
+    String text1, String text2, String image, BuildContext context) {
+  final screenHeight = MediaQuery.of(context).size.height;
+  final screenWidth = MediaQuery.of(context).size.width;
+
+  return GestureDetector(
+      onTap: () {},
+      child: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.all(Radius.circular(6)),
+          border: Border.all(
+            color: Color.fromARGB(255, 15, 15, 15), // Set the border color
+            width: 1.0, // Set the border width
+          ),
+        ),
+        height: screenHeight * 0.1,
+        width: screenWidth * 0.95,
+        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          Row(
+            children: [
+              Image.asset(
+                image,
+                scale: 4.5,
+              ),
+              SizedBox(width: screenWidth * 0.03),
+              Text(
+                text2,
+                style: TextStyle(
+                  color: Color.fromARGB(255, 3, 6, 12),
+                  fontSize: 18,
+                  fontFamily: 'Poppins',
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+            ],
+          ),
+          SizedBox(height: screenHeight * 0.01),
+          Text(
+            text1,
+            style: TextStyle(
+              color: Color.fromARGB(255, 3, 6, 12),
+              fontSize: 18,
+              fontFamily: 'Poppins',
+              fontWeight: FontWeight.w500,
+            ),
+          ),
+          SizedBox(height: screenHeight * 0.01),
+          // Row(
+          //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          //   children: [
+          //     SizedBox(
+          //       width: screenWidth * 0.7,
+          //     ),
+          //     Text(
+          //       text2,
+          //       style: TextStyle(
+          //         color: Color.fromARGB(255, 3, 6, 12),
+          //         fontSize: 18,
+          //         fontFamily: 'Poppins',
+          //         fontWeight: FontWeight.w500,
+          //       ),
+          //     ),
+          //   ],
+          // ),
+        ]),
+      ));
+}
+
+Widget graph2(String image, String text2, BuildContext context) {
+  final screenHeight = MediaQuery.of(context).size.height;
+  final screenWidth = MediaQuery.of(context).size.width;
+
+  return GestureDetector(
+      onTap: () {},
+      child: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.all(Radius.circular(6)),
+        ),
+        height: screenHeight * 0.35,
+        width: screenWidth * 0.9,
+        child: Column(children: [
+          SizedBox(height: screenHeight * 0.01),
+          Text(
+            text2,
+            style: TextStyle(
+              color: Color.fromARGB(255, 3, 6, 12),
+              fontSize: 18,
+              fontFamily: 'Poppins',
+              fontWeight: FontWeight.w500,
+            ),
+          ),
+          SizedBox(height: screenHeight * 0.01),
+          Container(
+            height: screenHeight * 0.26,
+            width: screenWidth * 0.9,
+            child: Image.asset(
+              image,
+              width: screenWidth * 0.5,
+              // height: screenHeight * 0.4,
+              // fit: BoxFit.cover,
+              scale: 3,
+            ),
+          )
+        ]),
+      ));
+}
